@@ -10,7 +10,7 @@ export class Stack<T> {
     }
 
     public pop(): T {
-        if (!this.top) {
+        if (this.isEmpty()) {
             throw new Error('Empty stack');
         }
 
@@ -23,7 +23,7 @@ export class Stack<T> {
     }
 
     public peek(): T {
-        if (!this.top) {
+        if (this.isEmpty()) {
             throw new Error('Empty stack');
         }
 
