@@ -34,8 +34,12 @@ export class LruCache<T, U> {
         }
     }
 
+    public get size(): number {
+        return this.cache.size;
+    }
+
     public isEmpty(): boolean {
-        return this.cache.size === 0;
+        return this.size === 0;
     }
 
     private use(cached: Pair<U, DoublyLinkedNode<T>>): void {
